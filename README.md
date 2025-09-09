@@ -13,7 +13,9 @@ Data yang dikelola meliputi:
 
 ## Alur Program  
 1. Saat dijalankan, program akan menampilkan menu utama:
+   
    <img width="272" height="125" alt="image" src="https://github.com/user-attachments/assets/b3072541-f756-4677-979d-f7f35f2af119" />
+   
 2. Tambah Produk
 Pengguna diminta memasukkan:
 - Nama produk
