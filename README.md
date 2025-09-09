@@ -21,6 +21,7 @@ Pengguna diminta memasukkan:
 - Brand
 - Ukuran
 - Tanggal kadaluarsa
+  
   <img width="396" height="486" alt="image" src="https://github.com/user-attachments/assets/288373bf-6ce9-4e9b-bd52-794a2489a054" />
 
 3. Lihat Produk
