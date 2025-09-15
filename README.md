@@ -6,33 +6,33 @@ Program ini adalah sistem manajemen koleksi skincare yang memungkinkan pengguna 
 ## Fitur-Fitur
 Program ini memiliki fitur-fitur dasar untuk mengelola koleksi skincare, di antaranya:
 
-Tambah Produk: Memungkinkan pengguna untuk memasukkan data produk skincare baru ke dalam koleksi.
+**Tambah Produk:** Memungkinkan pengguna untuk memasukkan data produk skincare baru ke dalam koleksi.
 
-Lihat Produk: Menampilkan semua produk yang tersimpan dalam koleksi.
+**Lihat Produk:** Menampilkan semua produk yang tersimpan dalam koleksi.
 
-Ubah Produk: Mengedit detail produk yang sudah ada.
+**Ubah Produk:** Mengedit detail produk yang sudah ada.
 
-Hapus Produk: Menghapus produk dari koleksi.
+**Hapus Produk:** Menghapus produk dari koleksi.
 
-Cari Produk: Mencari produk berdasarkan kata kunci yang cocok dengan nama, merek, atau kategori.
+**Cari Produk:** Mencari produk berdasarkan kata kunci yang cocok dengan nama, merek, atau kategori.
 
 ## Penerapan Konsep Pemrograman Berorientasi Objek (OOP)
 Program ini mengimplementasikan beberapa konsep OOP yang penting:
 
-Class: Terdapat tiga kelas utama (Skincare, SkincareService, dan Main) yang memiliki fungsi dan tanggung jawab masing-masing.
+**Class:** Terdapat tiga kelas utama (Skincare, SkincareService, dan Main) yang memiliki fungsi dan tanggung jawab masing-masing.
 
-Properties & Constructor: Kelas Skincare memiliki properti (namaProduk, brand, kategori, dll.) dan sebuah constructor untuk membuat objek baru.
+**Properties & Constructor:** Kelas Skincare memiliki properti (namaProduk, brand, kategori, dll.) dan sebuah constructor untuk membuat objek baru.
 
-Access Modifier: Properti pada kelas Skincare menggunakan access modifier private untuk memastikan data hanya dapat diakses melalui metode getter dan setter.
+**Access Modifier:** Properti pada kelas Skincare menggunakan access modifier private untuk memastikan data hanya dapat diakses melalui metode getter dan setter.
 
 ## Struktur Program (Pola MVC)
 Struktur program ini dirancang berdasarkan pola desain MVC untuk memisahkan logika, data, dan tampilan. Berikut adalah penjelasan struktur paketnya:
 
-packages model: Paket ini berisi kelas Model yaitu Skincare.java. Tugasnya hanya merepresentasikan data atau objek, menyimpan properti dan metode dasar seperti getter dan setter.
+**packages model:** Paket ini berisi kelas Model yaitu Skincare.java. Tugasnya hanya merepresentasikan data atau objek, menyimpan properti dan metode dasar seperti getter dan setter.
 
-packages service: Paket ini berisi kelas Controller yaitu SkincareService.java. Tugasnya adalah menangani semua logika bisnis dan operasi CRUD. Ini menjadi "jembatan" antara data (Model) dan tampilan (View).
+**packages service:** Paket ini berisi kelas Controller yaitu SkincareService.java. Tugasnya adalah menangani semua logika bisnis dan operasi CRUD. Ini menjadi "jembatan" antara data (Model) dan tampilan (View).
 
-packages manajemenkoleksiskincare: Paket ini berisi kelas View yaitu Main.java. Kelas ini bertanggung jawab untuk berinteraksi langsung dengan pengguna, menampilkan menu, menerima input, dan memanggil metode yang relevan dari SkincareService.
+**packages manajemenkoleksiskincare:** Paket ini berisi kelas View yaitu Main.java. Kelas ini bertanggung jawab untuk berinteraksi langsung dengan pengguna, menampilkan menu, menerima input, dan memanggil metode yang relevan dari SkincareService.
 
 ## Alur Program  
 1. Saat dijalankan, program akan menampilkan menu utama:
