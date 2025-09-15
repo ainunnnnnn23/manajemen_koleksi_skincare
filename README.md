@@ -1,9 +1,9 @@
 # Manajemen Koleksi Skincare  
 
 ## Deskripsi Program  
-Program ini adalah sistem manajemen koleksi skincare berbasis konsol yang memungkinkan pengguna untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada data produk. Program ini dibangun dengan mengikuti pola desain Model-View-Controller (MVC) untuk memastikan struktur kode yang terorganisir, modular, dan mudah dikelola.
+Program ini adalah sistem manajemen koleksi skincare yang memungkinkan pengguna untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada data produk. Program ini dibangun dengan mengikuti pola desain Model-View-Controller (MVC) untuk memastikan struktur kode yang terorganisir, modular, dan mudah dikelola.
 
-Fitur-Fitur
+## Fitur-Fitur
 Program ini memiliki fitur-fitur dasar untuk mengelola koleksi skincare, di antaranya:
 
 Tambah Produk: Memungkinkan pengguna untuk memasukkan data produk skincare baru ke dalam koleksi.
@@ -37,7 +37,7 @@ packages manajemenkoleksiskincare: Paket ini berisi kelas View yaitu Main.java. 
 ## Alur Program  
 1. Saat dijalankan, program akan menampilkan menu utama:
    
-  <img width="391" height="185" alt="image" src="https://github.com/user-attachments/assets/b28587d0-694a-4b6d-baf5-a8f5ee2dfc26" />
+<img width="391" height="185" alt="image" src="https://github.com/user-attachments/assets/b28587d0-694a-4b6d-baf5-a8f5ee2dfc26" />
 
    
 ## Tambah Produk
@@ -48,25 +48,34 @@ packages manajemenkoleksiskincare: Paket ini berisi kelas View yaitu Main.java. 
 - Ukuran
 - Tanggal kadaluarsa
   
-  <img width="396" height="486" alt="image" src="https://github.com/user-attachments/assets/288373bf-6ce9-4e9b-bd52-794a2489a054" />
+<img width="503" height="509" alt="image" src="https://github.com/user-attachments/assets/1dadd979-9352-45d1-9991-5dbdbc3f99fe" />
 
 ## Lihat Produk
 3. Program akan menampilkan daftar produk yang sudah tersimpan.
-   <img width="606" height="187" alt="image" src="https://github.com/user-attachments/assets/6ce7ca68-0cc9-4ad8-8710-0bf81313d8f6" />
+<img width="647" height="198" alt="image" src="https://github.com/user-attachments/assets/fc9cefb6-76bc-43a5-bc33-c89d78282bd8" />
+
 
 ## Ubah Produk
 4. Pengguna memilih nomor produk yang ingin diubah, kemudian memasukkan data baru.
-<img width="621" height="510" alt="image" src="https://github.com/user-attachments/assets/4eeecf2e-9ae5-41a6-b591-1c8d076d37f0" />
+<img width="665" height="534" alt="image" src="https://github.com/user-attachments/assets/0e634f16-e950-4d0b-b218-0618900acbc2" />
 
 
 ## Hapus Produk
 5. Pengguna memilih nomor produk yang ingin dihapus dari daftar.
-<img width="613" height="369" alt="image" src="https://github.com/user-attachments/assets/9f136dc5-7ecc-483c-a00c-c246a365086c" />
+<img width="655" height="225" alt="image" src="https://github.com/user-attachments/assets/321b11ba-010c-4e71-8b4c-ee4d5f439706" />
+
+
+
+## Cari Produk
+6. Pengguna menacari produk yg ingin di cari dengan memasukkan nama/brand/ atau kategori.
+<img width="658" height="216" alt="image" src="https://github.com/user-attachments/assets/2fe1849b-8078-42b2-945b-d6f19a5eb90c" />
+
 
 
 ## Keluar
-6. Program berhenti jika pengguna memilih menu keluar.
-<img width="414" height="175" alt="image" src="https://github.com/user-attachments/assets/ab0301f7-7fe3-487e-b971-9e27d28f3475" />
+7. Program berhenti jika pengguna memilih menu keluar.
+<img width="414" height="172" alt="image" src="https://github.com/user-attachments/assets/dff76f19-e3b1-4f88-88dd-064bddb835ac" />
+
 
 
  
