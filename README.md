@@ -28,11 +28,17 @@ Program ini mengimplementasikan beberapa konsep OOP yang penting:
 ## Struktur Program (Pola MVC)
 Struktur program ini dirancang berdasarkan pola desain MVC untuk memisahkan logika, data, dan tampilan. Berikut adalah penjelasan struktur paketnya:
 
-**packages model:** Paket ini berisi kelas Model yaitu Skincare.java. Tugasnya hanya merepresentasikan data atau objek, menyimpan properti dan metode dasar seperti getter dan setter.
+<img width="231" height="196" alt="image" src="https://github.com/user-attachments/assets/c4b73e8d-8549-41e8-a1fd-a81db486ca59" />
 
-**packages service:** Paket ini berisi kelas Controller yaitu SkincareService.java. Tugasnya adalah menangani semua logika bisnis dan operasi CRUD. Ini menjadi "jembatan" antara data (Model) dan tampilan (View).
 
-**packages manajemenkoleksiskincare:** Paket ini berisi kelas View yaitu Main.java. Kelas ini bertanggung jawab untuk berinteraksi langsung dengan pengguna, menampilkan menu, menerima input, dan memanggil metode yang relevan dari SkincareService.
+**packages manajemenkoleksiskincare:** Paket manajemenkoleksiskincare berisi kelas Main.java yang bertugas berinteraksi dengan pengguna, menampilkan menu, menerima input, termasuk daftar kategori skincare, dan memanggil metode yang relevan dari SkincareService.
+
+
+**packages model:** Paket model berisi kelas Produk.java sebagai kelas induk dengan properti dasar produk (nama produk, brand, kategori, ukuran, dan tanggal kadaluarsa), 
+
+serta kelas Skincare.java yang menjadi turunan (subclass) dari Produk untuk merepresentasikan produk skincare secara spesifik.
+
+**packages service:** Paket service berisi kelas SkincareService.java yang menangani logika bisnis dan operasi CRUD sebagai penghubung antara data dan tampilan.
 
 ## Alur Program  
 1. Saat dijalankan, program akan menampilkan menu utama:
@@ -48,33 +54,37 @@ Struktur program ini dirancang berdasarkan pola desain MVC untuk memisahkan logi
 - Ukuran
 - Tanggal kadaluarsa
   
-<img width="503" height="509" alt="image" src="https://github.com/user-attachments/assets/1dadd979-9352-45d1-9991-5dbdbc3f99fe" />
+<img width="556" height="497" alt="image" src="https://github.com/user-attachments/assets/d7d83c48-0ed8-4643-9b96-f52a159d9a99" />
+
 
 ## Lihat Produk
 3. Program akan menampilkan daftar produk yang sudah tersimpan.
-<img width="647" height="198" alt="image" src="https://github.com/user-attachments/assets/fc9cefb6-76bc-43a5-bc33-c89d78282bd8" />
+<img width="986" height="183" alt="image" src="https://github.com/user-attachments/assets/5fec605f-6922-4219-9af1-e577b97bbcc4" />
 
 
 ## Ubah Produk
 4. Pengguna memilih nomor produk yang ingin diubah, kemudian memasukkan data baru.
-<img width="665" height="534" alt="image" src="https://github.com/user-attachments/assets/0e634f16-e950-4d0b-b218-0618900acbc2" />
+<img width="987" height="619" alt="image" src="https://github.com/user-attachments/assets/f4bfc0c4-603a-4713-85d0-0b627aa3585d" />
+
 
 
 ## Hapus Produk
 5. Pengguna memilih nomor produk yang ingin dihapus dari daftar.
-<img width="655" height="225" alt="image" src="https://github.com/user-attachments/assets/321b11ba-010c-4e71-8b4c-ee4d5f439706" />
+<img width="949" height="213" alt="image" src="https://github.com/user-attachments/assets/0cf53c27-77c0-4e19-b5d7-cb9031b83d52" />
+
 
 
 
 ## Cari Produk
 6. Pengguna menacari produk yg ingin di cari dengan memasukkan nama/brand/ atau kategori.
-<img width="658" height="216" alt="image" src="https://github.com/user-attachments/assets/2fe1849b-8078-42b2-945b-d6f19a5eb90c" />
+<img width="951" height="293" alt="image" src="https://github.com/user-attachments/assets/f3b4f513-6485-446e-a933-38a9a625df2f" />
 
 
 
 ## Keluar
 7. Program berhenti jika pengguna memilih menu keluar.
-<img width="414" height="172" alt="image" src="https://github.com/user-attachments/assets/dff76f19-e3b1-4f88-88dd-064bddb835ac" />
+<img width="392" height="184" alt="image" src="https://github.com/user-attachments/assets/8a4b0c31-d368-4651-98ea-539c8f76e9d1" />
+
 
 
 
