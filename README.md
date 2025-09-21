@@ -53,6 +53,8 @@ serta kelas Skincare.java yang menjadi turunan (subclass) dari Produk untuk mere
 - Brand
 - Ukuran
 - Tanggal kadaluarsa
+- Tipe Kulit
+- Fungsi Produk
   
 <img width="556" height="497" alt="image" src="https://github.com/user-attachments/assets/d7d83c48-0ed8-4643-9b96-f52a159d9a99" />
 
