@@ -1,91 +1,106 @@
 # Manajemen Koleksi Skincare  
 
 ## Deskripsi Program  
-Program ini adalah sistem manajemen koleksi skincare yang memungkinkan pengguna untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada data produk. Program ini dibangun dengan mengikuti pola desain Model-View-Controller (MVC) untuk memastikan struktur kode yang terorganisir, modular, dan mudah dikelola.
+Program ini dibuat untuk mengelola koleksi produk skincare.  
+Fitur yang tersedia meliputi:
+- Menambahkan produk skincare (versi singkat dan lengkap).
+- Menampilkan daftar produk.
+- Menghapus produk berdasarkan ID.
+
+Selain itu, program ini juga menerapkan **konsep OOP (Object Oriented Programming)**:
+- **Abstraction** (menggunakan `abstract class`).
+- **Polymorphism** (Overloading & Overriding).
+- **Interface** (nilai tambah).
 
 ## Fitur-Fitur
 Program ini memiliki fitur-fitur dasar untuk mengelola koleksi skincare, di antaranya:
 
-**Tambah Produk:** Memungkinkan pengguna untuk memasukkan data produk skincare baru ke dalam koleksi.
+**Tambah Produk (Singkat/Lengkap):** Memungkinkan pengguna untuk memasukkan data produk skincare baru ke dalam koleksi.
 
 **Lihat Produk:** Menampilkan semua produk yang tersimpan dalam koleksi.
 
-**Ubah Produk:** Mengedit detail produk yang sudah ada.
-
 **Hapus Produk:** Menghapus produk dari koleksi.
 
-**Cari Produk:** Mencari produk berdasarkan kata kunci yang cocok dengan nama, merek, atau kategori.
 
 ## Penerapan Konsep Pemrograman Berorientasi Objek (OOP)
-Program ini mengimplementasikan beberapa konsep OOP yang penting:
+1. Abstraction
+`Skincare` dibuat sebagai **abstract class** yang memiliki atribut dasar (`id, nama, brand, kategori`)  
+dan **abstract method** `tampilkanDeskripsi()` yang wajib dioverride oleh setiap subclass.
 
-**Class:** Terdapat tiga kelas utama (Skincare, SkincareService, dan Main) yang memiliki fungsi dan tanggung jawab masing-masing.
-
-**Properties & Constructor:** Kelas Skincare memiliki properti (namaProduk, brand, kategori, dll.) dan sebuah constructor untuk membuat objek baru.
-
-**Access Modifier:** Properti pada kelas Skincare menggunakan access modifier private untuk memastikan data hanya dapat diakses melalui metode getter dan setter.
-
-## Struktur Program (Pola MVC)
-Struktur program ini dirancang berdasarkan pola desain MVC untuk memisahkan logika, data, dan tampilan. Berikut adalah penjelasan struktur paketnya:
-
-<img width="231" height="196" alt="image" src="https://github.com/user-attachments/assets/c4b73e8d-8549-41e8-a1fd-a81db486ca59" />
+<img width="697" height="561" alt="image" src="https://github.com/user-attachments/assets/bf75d09d-f549-4997-b9a8-d9a24dc0a676" />
 
 
-**packages manajemenkoleksiskincare:** Paket manajemenkoleksiskincare berisi kelas Main.java yang bertugas berinteraksi dengan pengguna, menampilkan menu, menerima input, termasuk daftar kategori skincare, dan memanggil metode yang relevan dari SkincareService.
+
+2. Polymorphism
+
+Overriding:
+SkincareSingkat dan SkincareLengkap keduanya meng-override tampilkanDeskripsi() dengan format berbeda.
+
+<img width="870" height="304" alt="image" src="https://github.com/user-attachments/assets/8e9ab692-df42-436d-bbb3-22a5eb67cfd8" />
 
 
-**packages model:** Paket model berisi kelas Produk.java sebagai kelas induk dengan properti dasar produk (nama produk, brand, kategori, ukuran, dan tanggal kadaluarsa), 
+Overloading:
+Pada SkincareService, terdapat 2 method tambahProduk() dengan parameter berbeda:
 
-serta kelas Skincare.java yang menjadi turunan (subclass) dari Produk untuk merepresentasikan produk skincare secara spesifik.
+<img width="400" height="110" alt="image" src="https://github.com/user-attachments/assets/b80d3575-b8a1-4eb9-b0c2-2814247f9abf" />
 
-**packages service:** Paket service berisi kelas SkincareService.java yang menangani logika bisnis dan operasi CRUD sebagai penghubung antara data dan tampilan.
+
+3. Interface (Nilai Tambah)
+
+Interface CetakInfo ditambahkan untuk mencetak informasi singkat produk.
+
+<img width="488" height="163" alt="image" src="https://github.com/user-attachments/assets/bd2c1d89-dc63-41cb-9414-74902d96799c" />
+
+
+##  Struktur Package
+<img width="360" height="242" alt="image" src="https://github.com/user-attachments/assets/02f956e9-b405-439b-9c50-85f97f27bc51" />
+
 
 ## Alur Program  
 1. Saat dijalankan, program akan menampilkan menu utama:
-   
-<img width="391" height="185" alt="image" src="https://github.com/user-attachments/assets/b28587d0-694a-4b6d-baf5-a8f5ee2dfc26" />
+
+<img width="304" height="99" alt="image" src="https://github.com/user-attachments/assets/89e8624a-5edc-4aee-8cf8-b4dd7ce3c498" />
+
 
    
-## Tambah Produk
+## Tambah Produk (singkat)
 2. Pengguna diminta memasukkan:
 - Nama produk
 - Kategori (dipilih dari daftar kategori skincare yang sudah disediakan)
 - Brand
-- Ukuran
-- Tanggal kadaluarsa
-- Tipe Kulit
-- Fungsi Produk
   
-<img width="556" height="497" alt="image" src="https://github.com/user-attachments/assets/d7d83c48-0ed8-4643-9b96-f52a159d9a99" />
+<img width="349" height="411" alt="image" src="https://github.com/user-attachments/assets/932d4d8a-d976-473d-9c2c-ade7855301ac" />
+
+
+
+## Tambah produk (Lengkap)
+3. Pengguna diminta memasukkan:
+- Nama produk
+- Kategori (dipilih dari daftar kategori skincare yang sudah disediakan)
+- Brand
+- manfaat
+<img width="385" height="429" alt="image" src="https://github.com/user-attachments/assets/8ca86869-4bf3-4809-b3ad-4d22bf562a45" />
+
+
 
 
 ## Lihat Produk
-3. Program akan menampilkan daftar produk yang sudah tersimpan.
-<img width="986" height="183" alt="image" src="https://github.com/user-attachments/assets/5fec605f-6922-4219-9af1-e577b97bbcc4" />
+4. Pengguna melihat produk yang sudah di tambahkan.
+<img width="616" height="189" alt="image" src="https://github.com/user-attachments/assets/51ba779d-0255-4503-8d23-b572fdc7d505" />
 
 
-## Ubah Produk
-4. Pengguna memilih nomor produk yang ingin diubah, kemudian memasukkan data baru.
-<img width="987" height="619" alt="image" src="https://github.com/user-attachments/assets/f4bfc0c4-603a-4713-85d0-0b627aa3585d" />
 
 
 
 ## Hapus Produk
 5. Pengguna memilih nomor produk yang ingin dihapus dari daftar.
-<img width="949" height="213" alt="image" src="https://github.com/user-attachments/assets/0cf53c27-77c0-4e19-b5d7-cb9031b83d52" />
-
-
-
-
-## Cari Produk
-6. Pengguna menacari produk yg ingin di cari dengan memasukkan nama/brand/ atau kategori.
-<img width="951" height="293" alt="image" src="https://github.com/user-attachments/assets/f3b4f513-6485-446e-a933-38a9a625df2f" />
+<img width="614" height="217" alt="image" src="https://github.com/user-attachments/assets/9ff16a74-61ab-4848-9629-2afdd6ea28d0" />
 
 
 
 ## Keluar
-7. Program berhenti jika pengguna memilih menu keluar.
-<img width="392" height="184" alt="image" src="https://github.com/user-attachments/assets/8a4b0c31-d368-4651-98ea-539c8f76e9d1" />
+6. Program berhenti jika pengguna memilih menu keluar.
+<img width="409" height="165" alt="image" src="https://github.com/user-attachments/assets/d056d786-bafe-4ae3-b518-31c6bf2af9ec" />
 
 
 
