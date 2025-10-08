@@ -1,11 +1,9 @@
 # Manajemen Koleksi Skincare  
 
 ## Deskripsi Program  
-Program ini dibuat untuk mengelola koleksi produk skincare.  
-Fitur yang tersedia meliputi:
-- Menambahkan produk skincare (versi singkat dan lengkap).
-- Menampilkan daftar produk.
-- Menghapus produk berdasarkan ID.
+Program ini dibuat untuk mengelola koleksi produk skincare dengan menggunakan konsep Pemrograman Berorientasi Objek (OOP).
+Menggunakan JDBC untuk bisa mengakses database.
+Semua data produk disimpan sementara dalam ArrayList, yang berfungsi sebagai simulasi ORM (Object Relational Mapping) — data diolah melalui objek tanpa menggunakan database langsung.
 
 Selain itu, program ini juga menerapkan **konsep OOP (Object Oriented Programming)**:
 - **Abstraction** (menggunakan `abstract class`).
@@ -15,11 +13,25 @@ Selain itu, program ini juga menerapkan **konsep OOP (Object Oriented Programmin
 ## Fitur-Fitur
 Program ini memiliki fitur-fitur dasar untuk mengelola koleksi skincare, di antaranya:
 
-**Tambah Produk (Singkat/Lengkap):** Memungkinkan pengguna untuk memasukkan data produk skincare baru ke dalam koleksi.
+**Tambah Produk (Singkat & Lengkap)**
+Pengguna dapat menambahkan dua jenis produk:
 
-**Lihat Produk:** Menampilkan semua produk yang tersimpan dalam koleksi.
+Skincare Singkat → berisi informasi dasar seperti ID, nama, kategori, dan brand.
 
-**Hapus Produk:** Menghapus produk dari koleksi.
+Skincare Lengkap → berisi informasi detail seperti ukuran, tanggal kadaluarsa, tipe kulit, serta manfaat produk.
+
+**Lihat Semua Produk**
+Menampilkan seluruh produk skincare yang sudah ditambahkan dengan format yang berbeda sesuai jenisnya.
+
+**Hapus Produk Berdasarkan ID**
+Menghapus data produk dari koleksi berdasarkan ID.
+
+**Database JDBC**
+Untuk Mengakses Database
+
+**Simulasi ORM (Tanpa Database)**
+Data dikelola di dalam program menggunakan ArrayList, bukan disimpan ke MySQL.
+Hal ini mensimulasikan cara kerja ORM di dunia nyata.
 
 
 ## Penerapan Konsep Pemrograman Berorientasi Objek (OOP)
@@ -53,13 +65,15 @@ Interface CetakInfo ditambahkan untuk mencetak informasi singkat produk.
 
 
 ##  Struktur Package
-<img width="360" height="242" alt="image" src="https://github.com/user-attachments/assets/02f956e9-b405-439b-9c50-85f97f27bc51" />
+<img width="215" height="331" alt="image" src="https://github.com/user-attachments/assets/f81c3508-abab-4428-a7cf-e0f5201e27fe" />
+
 
 
 ## Alur Program  
 1. Saat dijalankan, program akan menampilkan menu utama:
 
-<img width="304" height="99" alt="image" src="https://github.com/user-attachments/assets/89e8624a-5edc-4aee-8cf8-b4dd7ce3c498" />
+<img width="283" height="138" alt="image" src="https://github.com/user-attachments/assets/bad638d6-2276-48e0-922a-265ab79ff9b1" />
+
 
 
    
@@ -69,7 +83,8 @@ Interface CetakInfo ditambahkan untuk mencetak informasi singkat produk.
 - Kategori (dipilih dari daftar kategori skincare yang sudah disediakan)
 - Brand
   
-<img width="349" height="411" alt="image" src="https://github.com/user-attachments/assets/932d4d8a-d976-473d-9c2c-ade7855301ac" />
+<img width="293" height="295" alt="image" src="https://github.com/user-attachments/assets/15b91e05-4f8a-4344-8822-7da13200e7e4" />
+
 
 
 
@@ -79,14 +94,16 @@ Interface CetakInfo ditambahkan untuk mencetak informasi singkat produk.
 - Kategori (dipilih dari daftar kategori skincare yang sudah disediakan)
 - Brand
 - manfaat
-<img width="385" height="429" alt="image" src="https://github.com/user-attachments/assets/8ca86869-4bf3-4809-b3ad-4d22bf562a45" />
+<img width="379" height="363" alt="image" src="https://github.com/user-attachments/assets/11c0f054-29e2-4895-8db3-3a5e4d3b24e2" />
+
 
 
 
 
 ## Lihat Produk
 4. Pengguna melihat produk yang sudah di tambahkan.
-<img width="616" height="189" alt="image" src="https://github.com/user-attachments/assets/51ba779d-0255-4503-8d23-b572fdc7d505" />
+<img width="634" height="220" alt="image" src="https://github.com/user-attachments/assets/300b0339-9149-4866-bbfe-d530bc46fc4a" />
+
 
 
 
@@ -94,13 +111,25 @@ Interface CetakInfo ditambahkan untuk mencetak informasi singkat produk.
 
 ## Hapus Produk
 5. Pengguna memilih nomor produk yang ingin dihapus dari daftar.
-<img width="614" height="217" alt="image" src="https://github.com/user-attachments/assets/9ff16a74-61ab-4848-9629-2afdd6ea28d0" />
+<img width="633" height="235" alt="image" src="https://github.com/user-attachments/assets/717d10ce-e315-4fa8-bd79-c35a30acabd1" />
+
+
+
+## Tampilkan dari Database (JDBC)
+6. Pengguna memilih untuk menampilkan database
+<img width="628" height="279" alt="image" src="https://github.com/user-attachments/assets/397815e0-b6a4-4cda-ae57-a0ed95ba1741" />
+
+
+## Tampilkan dari ORM
+6. Pengguna memilih untuk menampilkan ORM
+<img width="636" height="234" alt="image" src="https://github.com/user-attachments/assets/b65e97bd-e73b-4ff0-b821-187ece0138f1" />
 
 
 
 ## Keluar
-6. Program berhenti jika pengguna memilih menu keluar.
-<img width="409" height="165" alt="image" src="https://github.com/user-attachments/assets/d056d786-bafe-4ae3-b518-31c6bf2af9ec" />
+8. Program berhenti jika pengguna memilih menu keluar.
+<img width="400" height="187" alt="image" src="https://github.com/user-attachments/assets/2b6d7a39-7bb3-41f5-8daf-116159ddc91b" />
+
 
 
 
