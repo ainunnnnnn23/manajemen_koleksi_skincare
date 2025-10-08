@@ -1,0 +1,134 @@
+package service;
+
+import model.Skincare;
+import model.SkincareLengkap;
+import model.SkincareSingkat;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class SkincareService {
+    private List<Skincare> listProduk = new ArrayList<>();
+    private int nextId = 1;
+    private Scanner scanner = new Scanner(System.in);
+
+    private final String[] kategoriList = {
+            "Cleanser", "Exfoliator", "Serum", "Cream", "Toner",
+            "Moisturizer", "Sunscreen", "Eye Care", "Masker", "Treatment", "Lip Care"
+    };
+
+    private void tampilkanKategori() {
+        System.out.println("=== Daftar Kategori Skincare ===");
+        for (int i = 0; i < kategoriList.length; i++) {
+            System.out.println((i + 1) + ". " + kategoriList[i]);
+        }
+    }
+
+    // ===================== CRUD DASAR =====================
+    public void tambahProduk() {
+        System.out.println("Tambah Produk (Singkat)");
+        System.out.print("Masukkan nama produk: ");
+        String nama = scanner.nextLine();
+
+        tampilkanKategori();
+        System.out.print("Pilih nomor kategori: ");
+        int noKategori = Integer.parseInt(scanner.nextLine());
+        String kategori = kategoriList[noKategori - 1];
+
+        System.out.print("Masukkan brand: ");
+        String brand = scanner.nextLine();
+
+        Skincare produk = new SkincareSingkat(nextId++, nama, kategori, brand);
+        listProduk.add(produk);
+        System.out.println("Produk singkat berhasil ditambahkan!");
+    }
+
+    public void tambahProdukLengkap() {
+        System.out.println("Tambah Produk (Lengkap)");
+        System.out.print("Masukkan nama produk: ");
+        String nama = scanner.nextLine();
+
+        tampilkanKategori();
+        System.out.print("Pilih nomor kategori: ");
+        int noKategori = Integer.parseInt(scanner.nextLine());
+        String kategori = kategoriList[noKategori - 1];
+
+        System.out.print("Masukkan brand: ");
+        String brand = scanner.nextLine();
+
+        System.out.print("Masukkan manfaat: ");
+        String manfaat = scanner.nextLine();
+
+        System.out.print("Masukkan ukuran (contoh: 100ml): ");
+        String ukuran = scanner.nextLine();
+
+        System.out.print("Masukkan tanggal kadaluarsa (YYYY-MM-DD): ");
+        String tanggalKadaluarsa = scanner.nextLine();
+
+        System.out.print("Masukkan tipe kulit: ");
+        String tipeKulit = scanner.nextLine();
+
+        Skincare produk = new SkincareLengkap(nextId++, nama, kategori, brand, manfaat, ukuran, tanggalKadaluarsa, tipeKulit);
+        listProduk.add(produk);
+        System.out.println("Produk lengkap berhasil ditambahkan!");
+    }
+
+    public void lihatProduk() {
+        if (listProduk.isEmpty()) {
+            System.out.println("Belum ada produk.");
+        } else {
+            System.out.println("=== Daftar Produk Skincare ===");
+            for (Skincare p : listProduk) {
+                System.out.println(p.toString());
+            }
+        }
+    }
+
+    public void hapusProduk() {
+        lihatProduk();
+        System.out.print("Masukkan ID produk yang ingin dihapus: ");
+        int id = Integer.parseInt(scanner.nextLine());
+
+        listProduk.removeIf(p -> p.getId() == id);
+        System.out.println("Produk berhasil dihapus!");
+    }
+
+    // ===================== JDBC (tampilkan dari database) =====================
+    public void tampilkanDariDatabase() {
+        System.out.println("\n=== Data dari Database (JDBC) ===");
+        String url = "jdbc:mysql://localhost:3306/koleksiskincare";
+        String user = "root";
+        String pass = "";
+
+        String query = "SELECT * FROM produk_skincare";
+
+        try (Connection conn = DriverManager.getConnection(url, user, pass);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
+
+            while (rs.next()) {
+                System.out.println(
+                        rs.getInt("id") + ". " +
+                        rs.getString("nama") + " | " +
+                        rs.getString("kategori") + " | " +
+                        rs.getString("brand") + " | " +
+                        rs.getString("manfaat")
+                );
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Gagal koneksi ke database: " + e.getMessage());
+        }
+    }
+
+    // ===================== ORM (simulasi sederhana) =====================
+    public void tampilkanDariORM() {
+        System.out.println("\n=== Data dari ORM (Simulasi) ===");
+        System.out.println("(Simulasi ORM) Menampilkan data skincare dari entity otomatis...");
+        for (Skincare p : listProduk) {
+            System.out.println(p.toString());
+        }
+    }
+}
