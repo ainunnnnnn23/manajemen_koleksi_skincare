@@ -14,6 +14,7 @@ Selain itu, program ini juga menerapkan **konsep OOP (Object Oriented Programmin
 Program ini memiliki fitur-fitur dasar untuk mengelola koleksi skincare, di antaranya:
 
 **Tambah Produk (Singkat & Lengkap)**
+
 Pengguna dapat menambahkan dua jenis produk:
 
 Skincare Singkat → berisi informasi dasar seperti ID, nama, kategori, dan brand.
@@ -21,15 +22,19 @@ Skincare Singkat → berisi informasi dasar seperti ID, nama, kategori, dan bran
 Skincare Lengkap → berisi informasi detail seperti ukuran, tanggal kadaluarsa, tipe kulit, serta manfaat produk.
 
 **Lihat Semua Produk**
+
 Menampilkan seluruh produk skincare yang sudah ditambahkan dengan format yang berbeda sesuai jenisnya.
 
 **Hapus Produk Berdasarkan ID**
+
 Menghapus data produk dari koleksi berdasarkan ID.
 
 **Database JDBC**
+
 Untuk Mengakses Database
 
 **Simulasi ORM (Tanpa Database)**
+
 Data dikelola di dalam program menggunakan ArrayList, bukan disimpan ke MySQL.
 Hal ini mensimulasikan cara kerja ORM di dunia nyata.
 
@@ -121,7 +126,7 @@ Interface CetakInfo ditambahkan untuk mencetak informasi singkat produk.
 
 
 ## Tampilkan dari ORM
-6. Pengguna memilih untuk menampilkan ORM
+7. Pengguna memilih untuk menampilkan ORM
 <img width="636" height="234" alt="image" src="https://github.com/user-attachments/assets/b65e97bd-e73b-4ff0-b821-187ece0138f1" />
 
 
